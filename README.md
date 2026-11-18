@@ -3,6 +3,19 @@
 Three models are compared on the same cleaned data and the same 80/20 train/test split:
 logistic regression, a decision tree, and CatBoost.
 
+## Why this project
+
+Most research on cyclist crashes focuses on cities. When we looked through the existing
+studies we found a big gap: very little work looks at cyclists in rural areas, and even
+less tries to predict how severe their injuries will be. As far as we know, that makes
+this project a fairly new contribution.
+
+We didn't want to rely on a single model, so we tried three different ones. They go from
+simple and easy to explain (logistic regression, decision tree) to more powerful but harder
+to interpret (CatBoost). Training all three on exactly the same data shows whether the
+more complex model is actually worth it, and `04_compare_models.py` checks whether the
+differences between them are real or just down to chance.
+
 ## Setup
 
 1. Put `Rural_Cyclist_Crashes_Final.csv` in this folder (or in a `data/` sub-folder).
